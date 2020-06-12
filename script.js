@@ -10,9 +10,11 @@ var password = "";
 var finalPassword = "";
 
 function generatePassword() {
-  var numOfChar = prompt("How many characters would you like?");
+  // Resets it back to default page
+  finalPassword = "";
+  var numOfChar = prompt("How many characters would you want?");
   // IF character input is less than 8 or more than 128, ask again
-  if (numOfChar > 7 || numOfChar < 129);
+  if (numOfChar > 7 && numOfChar < 129) {
   var confirmUpper = confirm("Do you want uppercase letters?");
   var confirmLower = confirm("Do you want lowercase letters?");
   var confirmNumbers = confirm("Do you want numbers?");
@@ -51,10 +53,10 @@ function generatePassword() {
   console.log(password)
   return finalPassword
 
-// } else {
-//   alert("Must be between 8 and 128 characters!")
+} else {
+  alert("Must be between 8 and 128 characters!")
+    }
 }
-
 
 // Write password to the #password input
 function writePassword() {
